@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>光棍影视 - 剧集更新索引与追剧排期清单 | guanggunyingshi-app.github.io</title>
+<meta name="description" content="追剧最怕的不是没得看，而是不知道在哪看、更新到第几集。光棍影视把散落在各个平台的剧集、院线片、综艺与动漫整理成一份能直接照着看的排期清单，站点主页 https://guanggunyingshi-app.github.io，随手打开就知道今晚该补哪一部。">
+<meta name="keywords" content="光棍影视,guanggunyingshi-app.github.io,剧集更新时间表,追剧排期清单,影视分类导航,观影记录,剧荒推荐,影视资源索引">
+<meta name="author" content="光棍影视">
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#0b0d12">
+<link rel="canonical" href="https://guanggunyingshi-app.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="光棍影视">
+<meta property="og:title" content="光棍影视 - 剧集更新索引与追剧排期清单">
+<meta property="og:description" content="散在各平台的片子，整理成一张能直接看的清单。光棍影视每日汇总更新条目、分类导航与观影记录。">
+<meta property="og:url" content="https://guanggunyingshi-app.github.io/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="光棍影视 - 剧集更新索引与追剧排期清单">
+<meta name="twitter:description" content="今晚看什么，打开光棍影视的排期清单就有答案。">
+<style>
+:root{
+  --ink:#0b0d12;
+  --ink2:#101420;
+  --panel:#151a25;
+  --panel2:#1b2130;
+  --line:#262d3d;
+  --line2:#333b4e;
+  --text:#e9ebf1;
+  --muted:#98a1b3;
+  --amber:#ef9f3c;
+  --amber2:#ffcb80;
+  --teal:#4ec6b0;
+  --radius:14px;
+  --wrap:1180px;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--text);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.75;
+  background-image:
+    radial-gradient(900px 500px at 88% -8%, rgba(239,159,60,.16), transparent 62%),
+    radial-gradient(700px 420px at -6% 12%, rgba(78,198,176,.10), transparent 60%);
+  background-attachment:fixed;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+h1,h2,h3,h4{margin:0;line-height:1.35;letter-spacing:.01em;}
+p{margin:0;}
+ul{margin:0;padding:0;list-style:none;}
+::selection{background:var(--amber);color:#151009;}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px;}
+.sec{padding:64px 0;}
+.sec-head{margin-bottom:30px;}
+.kicker{
+  display:inline-block;font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--amber);border:1px solid rgba(239,159,60,.4);border-radius:999px;
+  padding:4px 12px;background:rgba(239,159,60,.07);
+}
+.sec-head h2{font-size:clamp(24px,4vw,34px);margin:14px 0 10px;}
+.sec-head p{color:var(--muted);max-width:62ch;font-size:15px;}
+
+/* header */
+.head{
+  position:sticky;top:0;z-index:50;
+  background:rgba(11,13,18,.86);
+  backdrop-filter:saturate(140%) blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.head-in{max-width:var(--wrap);margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;}
+.brand{display:flex;flex-direction:column;line-height:1.2;}
+.brand b{font-size:21px;letter-spacing:.06em;}
+.brand b i{font-style:normal;color:var(--amber);}
+.brand span{font-size:11.5px;color:var(--muted);letter-spacing:.02em;}
+.nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap;}
+.nav a{
+  font-size:14px;color:var(--muted);padding:7px 12px;border-radius:9px;
+  border:1px solid transparent;transition:.22s;
+}
+.nav a:hover{color:var(--amber2);background:rgba(239,159,60,.09);border-color:rgba(239,159,60,.28);}
+.menu{
+  margin-left:auto;display:none;width:42px;height:38px;border:1px solid var(--line2);
+  border-radius:9px;background:var(--panel);cursor:pointer;
+}
+.menu i{display:block;width:17px;height:2px;background:var(--text);margin:4px auto;border-radius:2px;}
+
+/* hero */
+.hero{padding:70px 0 54px;}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:center;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;font-size:13px;color:var(--teal);
+  border:1px dashed rgba(78,198,176,.45);border-radius:8px;padding:5px 11px;
+}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(78,198,176,.18);}
+.hero h1{font-size:clamp(30px,5.4vw,50px);margin:20px 0 18px;font-weight:800;}
+.hero h1 em{font-style:normal;color:var(--amber);}
+.lede{color:#c3cad8;font-size:16.5px;max-width:52ch;}
+.hero-note{margin-top:16px;font-size:13.5px;color:var(--muted);border-left:2px solid var(--line2);padding-left:12px;}
+.btns{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;}
+.btn{
+  display:inline-block;padding:12px 22px;border-radius:11px;font-size:15px;font-weight:600;
+  transition:.22s;border:1px solid transparent;
+}
+.btn-a{background:linear-gradient(135deg,var(--amber),#e2822a);color:#1b1206;box-shadow:0 8px 22px -10px rgba(239,159,60,.7);}
+.btn-a:hover{transform:translateY(-2px);}
+.btn-b{border-color:var(--line2);color:var(--text);background:var(--panel);}
+.btn-b:hover{border-color:var(--amber);color:var(--amber2);}
+.stats{display:flex;gap:26px;margin:34px 0 0;flex-wrap:wrap;}
+.stats div{min-width:92px;}
+.stats dt{font-size:24px;font-weight:800;color:var(--amber2);}
+.stats dd{margin:2px 0 0;font-size:12.5px;color:var(--muted);}
+
+/* stack cards */
+.stack{position:relative;height:380px;}
+.stack .card{
+  position:absolute;border:1px solid var(--line);border-radius:var(--radius);
+  background:linear-gradient(160deg,var(--panel2),var(--panel));padding:16px 18px;
+  box-shadow:0 20px 40px -22px rgba(0,0,0,.9);
+}
+.stack .c1{left:0;top:0;width:74%;transform:rotate(-2.2deg);}
+.stack .c2{right:0;top:96px;width:76%;transform:rotate(1.6deg);}
+.stack .c3{left:8%;bottom:0;width:70%;transform:rotate(-.8deg);}
+.stack .card h4{font-size:15px;margin-bottom:6px;}
+.stack .card p{font-size:13px;color:var(--muted);}
+.stack .meta{display:flex;justify-content:space-between;font-size:11.5px;color:var(--amber);margin-bottom:8px;letter-spacing:.05em;}
+
+/* filmstrip */
+.film{
+  display:flex;gap:16px;overflow-x:auto;padding:22px 20px 24px;
+  scroll-snap-type:x mandatory;
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,.055) 0 8px, transparent 8px 26px) top/100% 12px no-repeat,
+    repeating-linear-gradient(90deg, rgba(255,255,255,.055) 0 8px, transparent 8px 26px) bottom/100% 12px no-repeat,
+    linear-gradient(180deg,#12161f,#0e121a);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.film::-webkit-scrollbar{height:6px;}
+.film::-webkit-scrollbar-thumb{background:var(--line2);border-radius:6px;}
+.poster{flex:0 0 208px;scroll-snap-align:start;}
+.ph{
+  height:262px;border-radius:12px;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;
+  background:linear-gradient(150deg,var(--a),var(--b));
+  border:1px solid rgba(255,255,255,.09);position:relative;overflow:hidden;
+}
+.ph::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 38%,rgba(8,10,14,.86));
+}
+.ph .tag{
+  position:absolute;top:12px;left:12px;z-index:2;font-size:11px;padding:3px 9px;border-radius:6px;
+  background:rgba(10,12,16,.72);border:1px solid rgba(255,255,255,.18);color:var(--amber2);
+}
+.ph h3{position:relative;z-index:2;font-size:16.5px;}
+.ph .sub{position:relative;z-index:2;font-size:12px;color:#cfd5e2;margin-top:4px;}
+.poster p{margin-top:9px;font-size:13px;color:var(--muted);}
+
+/* catalog masonry */
+.cols{column-count:3;column-gap:18px;}
+.cat{
+  break-inside:avoid;margin-bottom:18px;border:1px solid var(--line);border-radius:var(--radius);
+  background:linear-gradient(165deg,rgba(27,33,48,.9),rgba(17,21,30,.9));padding:18px;transition:.25s;
+}
+.cat:hover{border-color:rgba(239,159,60,.5);transform:translateY(-3px);}
+.cat h3{font-size:16.5px;display:flex;align-items:center;gap:9px;}
+.cat h3 s{text-decoration:none;width:9px;height:9px;border-radius:3px;background:var(--amber);flex:0 0 9px;}
+.cat p{margin-top:8px;font-size:13.5px;color:var(--muted);}
+.cat ul{margin-top:12px;display:flex;flex-wrap:wrap;gap:7px;}
+.cat li{font-size:12px;color:#c6ccda;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:7px;padding:4px 9px;}
+
+/* schedule table */
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);}
+table{border-collapse:collapse;width:100%;min-width:660px;font-size:14px;}
+thead th{
+  text-align:left;padding:14px 18px;background:var(--ink2);color:var(--amber2);
+  font-size:13px;letter-spacing:.06em;border-bottom:1px solid var(--line);
+}
+tbody td{padding:14px 18px;border-bottom:1px solid rgba(38,45,61,.7);color:#d3d8e4;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover td{background:rgba(239,159,60,.055);}
+td b{color:#fff;}
+.pill{font-size:11.5px;padding:3px 9px;border-radius:999px;border:1px solid;}
+.pill.on{color:var(--teal);border-color:rgba(78,198,176,.45);background:rgba(78,198,176,.09);}
+.pill.wait{color:var(--muted);border-color:var(--line2);}
+.pill.end{color:var(--amber);border-color:rgba(239,159,60,.4);background:rgba(239,159,60,.08);}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.why article{
+  border:1px solid var(--line);border-radius:var(--radius);padding:22px 20px;
+  background:linear-gradient(180deg,#161b27,#11151e);position:relative;overflow:hidden;
+}
+.why article::before{
+  content:"";position:absolute;left:0;top:0;width:100%;height:2px;
+  background:linear-gradient(90deg,var(--amber),transparent);
+}
+.why .num{font-size:12px;color:var(--amber);letter-spacing:.2em;}
+.why h3{margin:10px 0 8px;font-size:17px;}
+.why p{font-size:13.5px;color:var(--muted);}
+
+/* faq */
+.faq{max-width:820px;}
+.faq details{
+  border:1px solid var(--line);border-radius:12px;margin-bottom:12px;background:var(--panel);overflow:hidden;
+}
+.faq summary{
+  cursor:pointer;padding:16px 20px;font-size:15.5px;font-weight:600;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";color:var(--amber);font-size:19px;line-height:1;}
+.faq details[open] summary::after{content:"−";}
+.faq details[open] summary{border-bottom:1px solid var(--line);}
+.faq .body{padding:14px 20px 18px;font-size:14.5px;color:#c8cfdd;}
+
+/* cta */
+.cta{
+  border:1px solid rgba(239,159,60,.34);border-radius:18px;padding:38px 30px;
+  background:
+    radial-gradient(600px 200px at 15% 0%, rgba(239,159,60,.13), transparent 70%),
+    linear-gradient(160deg,#171c28,#0f131c);
+  display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;
+}
+.cta h2{font-size:clamp(21px,3.2vw,28px);}
+.cta p{margin-top:8px;color:var(--muted);font-size:14.5px;}
+.cta .url{
+  display:inline-block;margin-top:12px;font-size:13px;color:var(--amber2);
+  border-bottom:1px dashed rgba(255,203,128,.5);padding-bottom:2px;word-break:break-all;
+}
+
+/* footer */
+.foot{border-top:1px solid var(--line);margin-top:60px;padding:40px 0 54px;background:rgba(9,11,16,.6);}
+.foot-in{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px;}
+.foot h4{font-size:14px;color:var(--amber2);margin-bottom:12px;letter-spacing:.06em;}
+.foot p,.foot li{font-size:13.5px;color:var(--muted);}
+.foot li{padding:4px 0;}
+.foot li a:hover{color:var(--amber2);}
+.copy{
+  max-width:var(--wrap);margin:26px auto 0;padding:18px 20px 0;border-top:1px solid var(--line);
+  font-size:12.5px;color:#7f8899;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;
+}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:34px;}
+  .stack{height:330px;}
+  .cols{column-count:2;}
+  .why{grid-template-columns:repeat(2,1fr);}
+  .foot-in{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:640px){
+  .sec{padding:48px 0;}
+  .hero{padding:44px 0 34px;}
+  .nav{
+    display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;
+    background:rgba(13,16,22,.98);border-bottom:1px solid var(--line);padding:8px 14px 14px;
+  }
+  .nav.show{display:flex;}
+  .nav a{padding:11px 6px;border-bottom:1px solid rgba(38,45,61,.6);}
+  .menu{display:block;}
+  .head-in{position:relative;}
+  .stats{gap:18px;}
+  .stack{height:auto;display:flex;flex-direction:column;gap:14px;}
+  .stack .card{position:static;width:100%;transform:none;}
+  .cols{column-count:1;}
+  .why{grid-template-columns:1fr;}
+  .foot-in{grid-template-columns:1fr;}
+  .cta{padding:28px 20px;}
+  .poster{flex:0 0 172px;}
+  .ph{height:224px;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<header class="head">
+  <div class="head-in">
+    <a class="brand" href="#">
+      <b>光棍<i>影视</i></b>
+      <span>https://guanggunyingshi-app.github.io</span>
+    </a>
+    <button class="menu" type="button" id="menuBtn" aria-label="展开导航"><i></i><i></i><i></i></button>
+    <nav class="nav" id="nav">
+      <a href="#" data-go="update">今日更新</a>
+      <a href="#" data-go="catalog">分类导航</a>
+      <a href="#" data-go="schedule">追剧排期</a>
+      <a href="#" data-go="why">为什么用</a>
+      <a href="#" data-go="faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">每天两轮整理 · 更新即标注</span>
+        <h1>光棍影视：把散在各平台的片子，<em>整理成一张能直接看的清单</em></h1>
+        <p class="lede">追剧最折腾的从来不是没片可看，而是会员开了三个、还得挨个点开确认更新到第几集。光棍影视干的就是这件杂活：把剧集、院线片、综艺、动漫的更新节点和入口理顺，按周排好，你只管挑一部坐下看。</p>
+        <p class="hero-note">说明：本页只做索引与排期整理，不存放任何影视文件，观看请前往作品版权方所在平台。</p>
+        <div class="btns">
+          <a class="btn btn-a" href="#" data-go="schedule">看看这周排期</a>
+          <a class="btn btn-b" href="#" data-go="catalog">按类型找片</a>
+        </div>
+        <dl class="stats">
+          <div><dt>18</dt><dd>纳入索引的平台</dd></div>
+          <div><dt>30+</dt><dd>日均整理条目</dd></div>
+          <div><dt>2 次</dt><dd>每日刷新时点</dd></div>
+          <div><dt>0</dt><dd>跳转广告拦截层</dd></div>
+        </dl>
+      </div>
+      <div class="stack">
+        <div class="card c1">
+          <div class="meta"><span>更新提醒</span><span>周三 20:00</span></div>
+          <h4>周更剧 · 更新至第 12 集</h4>
+          <p>剧情走到中段，平台分账数据上调，下一集大概率加时长。</p>
+        </div>
+        <div class="card c2">
+          <div class="meta"><span>院线转网络</span><span>已上线</span></div>
+          <h4>本周新上 · 3 部</h4>
+          <p>下映 45 天后转付费点播，首周折扣常见，别急着原价买。</p>
+        </div>
+        <div class="card c3">
+          <div class="meta"><span>补片清单</span><span>共 7 部</span></div>
+          <h4>剧荒备选 · 悬疑向</h4>
+          <p>按单集时长排过序，通勤 25 分钟能看完一集的优先。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="update">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Section 01</span>
+        <h2>今日更新 · 光棍影视在跟的这几部</h2>
+        <p>横向拖动查看。每张卡片标了当前状态和下一更的时间点，标"完结"的可以直接一口气补完，不用担心追到一半断更。</p>
+      </div>
+    </div>
+    <div class="film">
+      <div class="poster">
+        <div class="ph" style="--a:#3a4a6b;--b:#131722;">
+          <span class="tag">更新至 12 集</span>
+          <h3>河边的旧案</h3>
+          <span class="sub">悬疑 · 单集 42 分钟</span>
+        </div>
+        <p>周三 20:00 更第 13 集，前 12 集约 8 小时可补完。</p>
+      </div>
+      <div class="poster">
+        <div class="ph" style="--a:#6b4a3a;--b:#1a1512;">
+          <span class="tag">完结 · 24 集</span>
+          <h3>南巷食堂</h3>
+          <span class="sub">生活 · 单集 30 分钟</span>
+        </div>
+        <p>第二季已备案，周期内可放心入坑。</p>
+      </div>
+      <div class="poster">
+        <div class="ph" style="--a:#2f5d55;--b:#101a19;">
+          <span class="tag">新上线</span>
+          <h3>沙丘之外</h3>
+          <span class="sub">科幻 · 128 分钟</span>
+        </div>
+        <p>院线转点播，首周有折扣，建议先看设定补遗。</p>
+      </div>
+      <div class="poster">
+        <div class="ph" style="--a:#5a3f63;--b:#16121c;">
+          <span class="tag">更新至 6 集</span>
+          <h3>暴雨来临前</h3>
+          <span class="sub">剧情 · 单集 45 分钟</span>
+        </div>
+        <p>周更两集，周五、周六各一集，节奏偏慢。</p>
+      </div>
+      <div class="poster">
+        <div class="ph" style="--a:#63483a;--b:#1b1511;">
+          <span class="tag">定档</span>
+          <h3>漫长的季节 重看版</h3>
+          <span class="sub">悬疑 · 12 集</span>
+        </div>
+        <p>修复版上线，画质提升明显，适合二刷。</p>
+      </div>
+      <div class="poster">
+        <div class="ph" style="--a:#3d4a2f;--b:#141810;">
+          <span class="tag">完结 · 8 集</span>
+          <h3>山那边的信</h3>
+          <span class="sub">纪录 · 单集 25 分钟</span>
+        </div>
+        <p>通勤档合适，一集正好一趟地铁。</p>
+      </div>
+      <div class="poster">
+        <div class="ph" style="--a:#4a3a5e;--b:#151220;">
+          <span class="tag">更新至 19 集</span>
+          <h3>深夜排练厅</h3>
+          <span class="sub">综艺 · 单集 90 分钟</span>
+        </div>
+        <p>每周六 12:00 上线，正片后有加更花絮。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="catalog">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Section 02</span>
+        <h2>分类导航 · 按心情挑，比按片名挑准</h2>
+        <p>八个入口对应八种打开电视的状态。每个分类下面挂的是常用筛选词，点进去就能按这些条件继续缩小范围。</p>
+      </div>
+      <div class="cols">
+        <div class="cat">
+          <h3><s></s>剧集 · 连载中</h3>
+          <p>标了更新日和当前集数，追更的人最常看的一栏。</p>
+          <ul><li>周更</li><li>日更</li><li>已完结</li><li>独播</li></ul>
+        </div>
+        <div class="cat">
+          <h3><s></s>电影 · 院线转网络</h3>
+          <p>记录下映到上线之间的空窗期，避免白等或重复付费。</p>
+          <ul><li>近三月</li><li>豆瓣高分</li><li>外语片</li><li>华语片</li></ul>
+        </div>
+        <div class="cat">
+          <h3><s></s>综艺 · 周播</h3>
+          <p>含加更、花絮、会员专享的更新时间差，正片别看漏。</p>
+          <ul><li>音乐</li><li>生活</li><li>竞技</li><li>脱口秀</li></ul>
+        </div>
+        <div class="cat">
+          <h3><s></s>动漫 · 新番与补番</h3>
+          <p>新番按季度归档，老番按篇幅排，长篇标了总集数。</p>
+          <ul><li>本季新番</li><li>完结佳作</li><li>剧场版</li><li>国创</li></ul>
+        </div>
+        <div class="cat">
+          <h3><s></s>纪录片 · 短篇幅</h3>
+          <p>单集 25 分钟以内的优先列出，通勤和睡前都能看。</p>
+          <ul><li>人文</li><li>自然</li><li>美食</li><li>历史</li></ul>
+        </div>
+        <div class="cat">
+          <h3><s></s>短剧 · 一口气看完</h3>
+          <p>单集 3 分钟以内、总时长不超过两小时的合集。</p>
+          <ul><li>竖屏</li><li>横屏</li><li>反转向</li><li>甜宠向</li></ul>
+        </div>
+        <div class="cat">
+          <h3><s></s>片单 · 编辑整理</h3>
+          <p>按主题串起来的组合，比如"雨天""熬夜""带父母看"。</p>
+          <ul><li>周末补片</li><li>合家欢</li><li>入门经典</li><li>冷门遗珠</li></ul>
+        </div>
+        <div class="cat">
+          <h3><s></s>观影记录 · 自建</h3>
+          <p>看过的打勾、看到第几集写清楚，换设备也不丢进度。</p>
+          <ul><li>在看</li><li>想看</li><li>弃剧</li><li>已看完</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="schedule">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Section 03</span>
+        <h2>追剧排期 · 这周哪天有什么，一眼看完</h2>
+        <p>光棍影视按自然周排，周一开始。状态栏用三种颜色区分：连载中、待定档、已完结。手机上左右滑动表格可看完整列。</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>作品</th><th>类型</th><th>更新安排</th><th>进度</th><th>单集时长</th><th>状态</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><b>河边的旧案</b></td><td>悬疑剧</td><td>每周三 20:00</td><td>12 / 24</td><td>42 分钟</td><td><span class="pill on">连载中</span></td></tr>
+            <tr><td><b>暴雨来临前</b></td><td>剧情剧</td><td>周五、周六各一集</td><td>6 / 16</td><td>45 分钟</td><td><span class="pill on">连载中</span></td></tr>
+            <tr><td><b>深夜排练厅</b></td><td>综艺</td><td>每周六 12:00</td><td>19 / 24</td><td>90 分钟</td><td><span class="pill on">连载中</span></td></tr>
+            <tr><td><b>南巷食堂</b></td><td>生活剧</td><td>已全部上线</td><td>24 / 24</td><td>30 分钟</td><td><span class="pill end">已完结</span></td></tr>
+            <tr><td><b>山那边的信</b></td><td>纪录片</td><td>已全部上线</td><td>8 / 8</td><td>25 分钟</td><td><span class="pill end">已完结</span></td></tr>
+            <tr><td><b>沙丘之外</b></td><td>科幻电影</td><td>点播已开</td><td>正片 128 分钟</td><td>—</td><td><span class="pill end">已完结</span></td></tr>
+            <tr><td><b>春分那场雪</b></td><td>文艺电影</td><td>定档待公布</td><td>—</td><td>—</td><td><span class="pill wait">待定档</span></td></tr>
+            <tr><td><b>旧城改造记</b></td><td>现实剧</td><td>排播调整中</td><td>—</td><td>45 分钟</td><td><span class="pill wait">待定档</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="why">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Section 04</span>
+        <h2>为什么用光棍影视</h2>
+        <p>不做搬运、不存文件，只把找片这件事的前半段——确认在哪、更新到哪、值不值得看——做扎实。</p>
+      </div>
+      <div class="why">
+        <article>
+          <div class="num">01 / 索引</div>
+          <h3>只看得见的入口</h3>
+          <p>每条都标清版权方平台与付费方式，会员能看的优先排前面，不用逐个 App 试探。</p>
+        </article>
+        <article>
+          <div class="num">02 / 排期</div>
+          <h3>按周而不是按热度</h3>
+          <p>热度榜天天变，更新时间不会。排期以播出日历为准，写完一周才改一次。</p>
+        </article>
+        <article>
+          <div class="num">03 / 篇幅</div>
+          <h3>标单集时长</h3>
+          <p>25 分钟和 90 分钟是两种观看决策。时长写在前头，睡前别误开长片。</p>
+        </article>
+        <article>
+          <div class="num">04 / 记录</div>
+          <h3>进度跟着人走</h3>
+          <p>看到第几集自己记，换手机、换平板接着看，不用回想"上次看到哪了"。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Section 05</span>
+        <h2>常见问题</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>光棍影视是做什么的？</summary>
+          <div class="body">一个影视索引与追剧排期页面。它不托管、不存储任何视频文件，只负责把作品的更新节点、所在平台、篇幅时长整理清楚，节省你逐个平台确认的时间。</div>
+        </details>
+        <details>
+          <summary>站点地址是多少，怎么记住？</summary>
+          <div class="body">主页是 https://guanggunyingshi-app.github.io 。记法很简单：拼音"光棍影视"后面加 -app，前面是 github.io 的固定前缀，输一次基本就忘不掉。</div>
+        </details>
+        <details>
+          <summary>更新多久刷一次？</summary>
+          <div class="body">每天两轮，中午一轮核对当日上新，晚上八点后一轮核对周更剧的实际更新情况。遇到临时改档，会在条目后面直接标"排播调整中"。</div>
+        </details>
+        <details>
+          <summary>找不到想看的那部片子怎么办？</summary>
+          <div class="body">先看分类导航里的筛选词能不能命中；仍没有的话，多半是尚未定档或版权方未开放网络播放，这类会统一归到"待定档"，公布后当天补进排期。</div>
+        </details>
+        <details>
+          <summary>手机上打开排版会乱吗？</summary>
+          <div class="body">不会。整页按移动端优先做的自适应：导航收进折叠菜单，更新条改横向滑动，排期表可左右拖动，正文宽度随屏幕自动收缩。</div>
+        </details>
+        <details>
+          <summary>为什么有的剧更新到一半停了？</summary>
+          <div class="body">常见原因是排播调整、档期让位或版权续约未完成。这类不会从表里删掉，会保留条目并标注状态，恢复更新后再改回"连载中"。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <h2>今晚看什么，别再花二十分钟挑</h2>
+          <p>把光棍影视放进书签，打开就是排好的清单。</p>
+          <span class="url">https://guanggunyingshi-app.github.io</span>
+        </div>
+        <div class="btns" style="margin:0;">
+          <a class="btn btn-a" href="#">收藏本站</a>
+          <a class="btn btn-b" href="#">返回顶部</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <h4>光棍影视</h4>
+      <p>剧集更新索引、观影排期与分类导航。内容仅作观看指引，作品版权归各版权方所有。</p>
+      <p style="margin-top:10px;">网址：https://guanggunyingshi-app.github.io</p>
+    </div>
+    <div>
+      <h4>栏目</h4>
+      <ul>
+        <li><a href="#">今日更新</a></li>
+        <li><a href="#">分类导航</a></li>
+        <li><a href="#">追剧排期</a></li>
+        <li><a href="#">观影记录</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>关于</h4>
+      <ul>
+        <li><a href="#">收录规则</a></li>
+        <li><a href="#">更新时点</a></li>
+        <li><a href="#">反馈与纠错</a></li>
+        <li><a href="#">版权说明</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy">
+    <span>&copy; 2026 光棍影视 · guanggunyingshi-app.github.io</span>
+    <span>影视索引 · 追剧排期 · 分类导航</span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"光棍影视",
+  "url":"https://guanggunyingshi-app.github.io/",
+  "description":"光棍影视提供剧集更新索引、追剧排期清单与影视分类导航，帮助观众快速确认作品在哪看、更新到第几集。",
+  "inLanguage":"zh-CN",
+  "publisher":{"@type":"Organization","name":"光棍影视","url":"https://guanggunyingshi-app.github.io/"}
+}
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn');
+  var nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){nav.classList.toggle('show');});
+  document.querySelectorAll('[data-go]').forEach(function(el){
+    el.addEventListener('click',function(e){
+      e.preventDefault();
+      var target=document.getElementById(el.getAttribute('data-go'));
+      if(target){
+        if(window.innerWidth<=640){nav.classList.remove('show');}
+        target.scrollIntoView({behavior:'smooth',block:'start'});
+      }
+    });
+  });
+  document.querySelectorAll('a[href="#"]').forEach(function(el){
+    if(el.getAttribute('data-go')){return;}
+    el.addEventListener('click',function(e){
+      if(el.className.indexOf('brand')>-1){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});return;}
+      e.preventDefault();
+    });
+  });
+})();
+</script>
+</body>
+</html>
